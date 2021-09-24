@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto 01 - Jogo do humor</title>
+    <link rel="stylesheet" href="style.css" />
+
+
+</head>
+
+<body>
+    <header>
+        <div id="txt">
+            <hi>Jogo do humor <br>Meu Malvado Favorito</hi>
+        </div>
+        <img src="_imagens/Meu-Malvado.png" alt="banner" width="50%">
+    </header>
+    <main>
+
+        <section id="incones">
+            <ul type="txt">
+                <h2>Qual Malvado Favorito você é hoje?</h2>
+                <ul>
+                    <li>
+                        <a href="#imgminion" onclick="minions()">
+                            <img style="margin-right: 20px;" src="_imagens/carl.png" alt="Minios" width="100" />
+
+                        </a>
+                        <a href="#imggru" onclick="gru()">
+                            <img style="margin-right: 20px;" src="_imagens/vinilos-gru.png" alt="Gru Feliz" width="150">
+                        </a>
+
+                        <a href="#imgmargo" onclick="margo()">
+                            <img style="margin-right: 20px;" src="_imagens/MargoFeliz.png" alt="MargoFeliz" width="150">
+                        </a>
+                        <a href="#imgedith" onclick="edith()">
+                            <img style="margin-right: 20px;" src="_imagens/EdithFeliz.png" alt="EdithFeliz" width="200">
+                        </a>
+                        <a href="#imgagnes" onclick="agnes()">
+                            <img src="_imagens/AgnesFeliz.png" alt="AgnesFeliz" width="200">
+                        </a>
+
+                    </li>
+                </ul>
+                </nav>
+        </section>
+        <section id="infos">
+
+            <div id="txt">
+                <h2><span id="tipos">Como você tá hoje?</span> </h2>
+                <br>
+            <h3>
+                Personagem:<br>
+                <span id = "personagem">Carl</span>
+            </h3>
+            <h3>
+                Situação:<br>
+                <span id = "situacao">Feliz</span>
+            </h2>
+     </div>
+
+
+            <div id="imgMinion" class="imagem-center" onclick="minions()">
+                <img width="200" value="altMinion" id="imgminion" src="_imagens/carl.png" alt="Carl Feliz">
+            </div>
+
+            <div id="imgGru" class="esconder imagem-center" onclick="gru()">
+                <img width="200" value="altGru" id="imggru" src="_imagens/GruFeliz.png" alt="Gru Feliz">
+            </div>
+            
+            <div id="imgMargo" class="esconder imagem-center">
+                <img id="imgmargo" src="_imagens/MargoFeliz.png" alt="Margo Feliz">
+            </div>
+
+            <div id="imgEdith" class="esconder imagem-center">
+               
+                <img width="200" id="imgedith" src="_imagens/EdithFeliz.png" alt="Edith Feliz">
+            </div>
+
+            <div id="imgAgnes" class="esconder imagem-center">
+                
+                <img id="imgagnes" src="_imagens/AgnesFeliz.png" alt="Agnes Feliz">
+            </div>
+
+            </div>
+
+            <button  id="alterar" value="minion2" value="gru2" value="margo2">Alterar humor </button>
+
+    </main>
+    </section>
+    <footer id="rodape">
+        <p>Copyright 2021 - by Danusa Jesus</br>
+            <a href="#" target="_blank">Facebook</a> |
+            <a href="#" target="_blank">Linkedin</a>
+        </p>
+    </footer>
+
+    <script language="javascript" src="_javascript/funcoes.js"></script>
+</body>
+
+</html>
