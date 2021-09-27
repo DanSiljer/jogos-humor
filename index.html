@@ -14,7 +14,7 @@
 <body>
     <header>
         <div id="txt">
-            <hi>Jogo do humor <br>Meu Malvado Favorito</hi>
+            <hi>Jogo do humor<br>Meu Malvado Favorito</hi>
         </div>
         <img src="_imagens/Meu-Malvado.png" alt="banner" width="50%">
     </header>
@@ -50,17 +50,17 @@
         <section id="infos">
 
             <div id="txt">
-                <h2><span id="tipos">Como você tá hoje?</span> </h2>
-                <br>
-            <h3>
+                <h3 id="date"></h3>
+                 <h2><span id="tipos">Como você tá hoje?</span> </h2>
+                
+            <!-- <h3>
                 Personagem:<br>
                 <span id = "personagem">Carl</span>
-            </h3>
-            <h3>
-                Situação:<br>
-                <span id = "situacao">Feliz</span>
-            </h2>
-     </div>
+            </h3> -->
+                <h4>
+                    <span id = "situacao">Feliz</span>
+                </h4>
+            </div>
 
 
             <div id="imgMinion" class="imagem-center" onclick="minions()">
@@ -71,35 +71,37 @@
                 <img width="200" value="altGru" id="imggru" src="_imagens/GruFeliz.png" alt="Gru Feliz">
             </div>
             
-            <div id="imgMargo" class="esconder imagem-center">
+            <div id="imgMargo" class="esconder imagem-center" onclick="margo()">
                 <img id="imgmargo" src="_imagens/MargoFeliz.png" alt="Margo Feliz">
             </div>
 
-            <div id="imgEdith" class="esconder imagem-center">
+            <div id="imgEdith" class="esconder imagem-center" onclick="edith()">
                
                 <img width="200" id="imgedith" src="_imagens/EdithFeliz.png" alt="Edith Feliz">
             </div>
 
-            <div id="imgAgnes" class="esconder imagem-center">
+            <div id="imgAgnes" class="esconder imagem-center" onclick="agnes()">
                 
                 <img id="imgagnes" src="_imagens/AgnesFeliz.png" alt="Agnes Feliz">
             </div>
 
             </div>
 
-            <button  id ="alterar"  value="segundo" value="minion2" value="gru2" value="margo2">Alterar humor </button>
+            <button  id ="alterar" value="segundo">Alterar humor</button>
 
             <section id="frases">
-                <h3>Feliz</h3>
-        
+                <br><p><span>Não importa o que você decidiu. O que importa é que isso te faça feliz!</span></p><br>
+                        <!-- <img id="fundo" src="_/imagens/fundo.png" alt="fundo frases"> -->
             </section>
+           
+            
 
     </main>
     </section>
     <footer id="rodape">
         <p>Copyright 2021 - by Danusa Jesus</br>
-            <a href="#" target="_blank">Facebook</a> |
-            <a href="#" target="_blank">Linkedin</a>
+            <a href="https://www.facebook.com/dansiljer" target="_blank">Facebook</a> |
+            <a href="https://www.linkedin.com/in/danusajesus" target="_blank">Linkedin</a>
         </p>
     </footer>
 

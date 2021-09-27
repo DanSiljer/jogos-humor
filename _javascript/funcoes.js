@@ -1,3 +1,16 @@
+//data
+var currentDate  = new Date(),
+currentDay   = currentDate.getDate() < 10 
+             ? '0' + currentDate.getDate() 
+             : currentDate.getDate(),
+currentMonth = currentDate.getMonth() < 9 
+             ? '0' + (currentDate.getMonth() + 1) 
+             : (currentDate.getMonth() + 1);
+
+document.getElementById("date").innerHTML = currentDay + '/' + currentMonth + '/' +  currentDate.getFullYear();
+
+
+
 //Funçao dos incones
 function minions() {
 
@@ -100,96 +113,83 @@ function agnes() {
 }
 
 
+
+
 //Mudar foto
 
-const elementoPersonagemMinion = document.querySelector('#personagem');
-const elementoPersonagemGru = document.querySelector('#personagem');
-// const elementoPersonagemMargo = document.querySelector('#personagem');
-// const elementoPersonagemEdith= document.querySelector('#personagem');
-// const elementoPersonagemAgnes= document.querySelector('#personagem');
 
-const elementoImgMinion = document.querySelector('#imgminion', '#imggru')
+const elementoImgMinion = document.querySelector('#imgminion')
 const elementoImgGru = document.querySelector('#imggru')
-// const elementoImgMargo = document.querySelector()
-// const elementoImgEdith = document.querySelector()
-// const elementoImgAgnes = document.querySelector()
+const elementoImgMargo = document.querySelector('#imgmargo')
+const elementoImgEdith = document.querySelector('#imgedith')
+const elementoImgAgnes = document.querySelector('#imgagnes')
 
-const elementoSituacaoMinion = document.querySelector('#situacao')
-const elementoSituacaoGru = document.querySelector('#situacao')
-// const elementoSituacaoMargo= document.querySelector('#situacao')
-// const elementoSituacaoEdith = document.querySelector('#situacao')
-// const elementoSituacaoAgnes = document.querySelector('#situacao')
+const elementoSituacao = document.querySelector('#situacao')
+const elementoFrases = document.querySelector('#frases')
+
+
 
 let elementoBtn = document.querySelector('#alterar')
+
 
 window.onload = function() {
 
 };
 
+
 elementoBtn.addEventListener('click', function ( ){
 
-  if(elementoBtn.value == 'primeiro'){ //Minios
-    elementoImgMinion.src = '_imagens/carl.png' ;
-    elementoImgGru.src = '_imagens/GruFeliz2.png' ;
-    elementoPersonagemMinion.innerText = 'Carl' ;
-    elementoPersonagemMinion.innerText = 'Gru' ;
-    elementoSituacaoMinion.innerText = 'Feliz';
-    elementoSituacaoGru.innerText = 'Feliz';
+  if(elementoBtn.value == 'primeiro'){
+    elementoImgMinion.src = '_imagens/Carl.png';
+    elementoImgGru.src = '_imagens/GruFeliz3.png';
+    elementoImgMargo.src = '_imagens/MargoFeliz.png';
+    elementoImgEdith.src = '_imagens/EdithFeliz.png';
+    elementoImgAgnes.src = '_imagens/AgnesFeliz.png';
 
+    elementoSituacao.innerText = 'Feliz';
+    elementoFrases.innerText = 'Não importa o que você decidiu. O que importa é que isso te faça feliz!';
     elementoBtn.value = 'segundo' ;
    
 } else if(elementoBtn.value == 'segundo') { 
-    elementoImgMinion.src = '_imagens/Wolverine.png' ;
-    elementoImgGru.src = '_imagens/gruApaixonado.png' ;
-    elementoPersonagemMinion.innerText = 'Wolverine' ;
-    elementoPersonagemMinion.innerText = "Gru" ;
-    elementoSituacaoMinion.innerText = 'Saí da frete, tô virado(a) na moléstia.' ;
-    elementoSituacaoGru.innerText = 'Amando';
+    elementoImgMinion.src = '_imagens/Wolverine.png';
+    elementoImgGru.src = '_imagens/gru3.png';
+    elementoImgMargo.src = '_imagens/MargoIrritada.png';
+    elementoImgEdith.src = '_imagens/Edith_irritada.png';
+    elementoImgAgnes.src = '_imagens/AgnesEmburrada.png';
+    
+
+    elementoSituacao.innerText = 'Saí da frete, tô virado(a) na moléstia.' ;
+    elementoFrases.innerText = 'Evite sentimentos corrosivos como o rancor, a raiva e as mágoas, que nos tiram noites de sono e em nada afetam as pessoas responsáveis por causá-los.'
+   
     elementoBtn.value = 'terceiro' ;
+
+}else if(elementoBtn.value == 'terceiro') { 
+    elementoImgMinion.src='_imagens/minion_indiferente2.png';
+    elementoImgGru.src='_imagens/gruIndiferente.png';
+    elementoImgMargo.src='_imagens/MargoIndifente.png';
+    elementoImgEdith.src='_imagens/EdithInsatisfeita.png';
+    elementoImgAgnes.src='_imagens/Agnes_tedio.png';
+ 
+    elementoSituacao.innerText = 'Tô nem aí!' ;
+    elementoFrases.innerText = 'A indiferença é o sono da alma.';
+  
+    elementoBtn.value = 'quarto';
     
 
 } else{ 
-    elementoImgMinion.src = '_imagens/tim.png' ;
-    elementoImgGru.src = '_imagens/Gru3.png' 
-    elementoPersonagemMinion.innerText = 'Tim' ;
-    elementoPersonagemGru.innerText = 'Gru' ;
-    elementoSituacaoMinion.innerText = 'Tô nem aí.';
-    elementoSituacaoGru.innerText = 'Saí de baixo, hoje tô afim de explodir.';
+    elementoImgMinion.src = '_imagens/MinionTedio.png' ;
+    elementoImgGru.src = '_imagens/Gru_triste.png';
+    elementoImgMargo.src = '_imagens/MargoTriste2.png';
+    elementoImgEdith.src ='_imagens/Edith_estressada.png';
+    elementoImgAgnes.src ='_imagens/AgnesTriste.png';
+
+    elementoSituacao.innerText='Triste.';
+    elementoFrases.innerText='Lute. Acredite. Conquiste. Perca. Deseje. Espere. Alcance. Invada. Caia. Seja tudo o quiser ser, mas, acima de tudo, seja você sempre.';
     elementoBtn.value = 'primeiro';
     
 }
 
 })
-
-// const elementoPersonagemGru = document.querySelector('#personagem');
-// const elementoImgGru = document.querySelector('#imgru')
-// const elementoSituacaoGru = document.querySelector('#situacao')
-// let elementoG = document.querySelector('#alterar')
-
-
-// elementoG.addEventListener('click', function ( ){
-
-//     if(elementoG.value == 'gru1'){//Gru
-//         elementoImgGru.src = '_imagens/GruFeliz2.png' 
-//         elementoPersonagemGru.innerText = 'Carl' 
-//         elementoSituacaoGru.innerText = 'Feliz'
-//         elementoG.value = 'gru2' 
-
-//     } else if(elementoG.value == 'gru2') { 
-//         elementoImgGru.src = '_imagens/gruApaixonado.png'  
-//         elementoPersonagemGru.innerText = 'Gru' 
-//         elementoSituacaoGru.innerText = 'Apaixonado.' 
-//         elementoG.value = 'gru3'  
-
-//     } else{ 
-//         elementoImgGru.src = '_imagens/Gru3.png' 
-//         elementoPersonagemGru.innerText = 'Gru' 
-//         elementoSituacaoGru.innerText = 'Irado.' 
-//         elementoG.value = 'gru1'
-//   }
-// })
-
-
 
 
 
